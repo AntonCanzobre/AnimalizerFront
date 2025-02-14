@@ -1,0 +1,7 @@
+{
+  "name": "AnimalizerFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
