@@ -1,20 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Animalizer
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-beige-arena p-6">
+    <!-- Botón para mostrar/ocultar -->
+    <button
+      (click)="toggleCard()"
+      class="mb-4 px-4 py-2 bg-verde-bosque text-white font-bold rounded-lg shadow-md hover:bg-marron-tierra transition">
+      {{ showCard ? 'Ocultar Tarjeta' : 'Mostrar Tarjeta' }}
+    </button>
+
+    <!-- Tarjeta solo si showCard es true -->
+    <app-information-card
+      *ngIf="showCard"
+      title="Perrito Feliz"
+      description="Un lindo perrito disfrutando del sol."
+      imageUrl="https://images.unsplash.com/photo-1560807707-8cc77767d783"
+      class="border border-marron-tierra bg-azul-cielo text-gray-800 shadow-lg"
+    />
+
+
+    <app-activation-camera></app-activation-camera>
+
   </div>
+
+
+
 </ion-content>

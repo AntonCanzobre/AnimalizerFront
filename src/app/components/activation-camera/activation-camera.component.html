@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center justify-center p-6">
+  <!-- Botón para abrir la cámara -->
+  <button
+    (click)="openCamera()"
+    class="px-4 py-2 bg-verde-bosque text-white font-bold rounded-lg shadow-md hover:bg-marron-tierra transition">
+    Camara
+  </button>
+
+  <!-- Mostrar la imagen capturada -->
+  <div *ngIf="capturedImage" class="mt-4">
+    <h3 class="text-lg font-semibold text-gray-800">Foto Capturada:</h3>
+    <img [src]="capturedImage" alt="Foto tomada" class="w-64 h-64 rounded-lg shadow-lg">
+  </div>
+</div>
